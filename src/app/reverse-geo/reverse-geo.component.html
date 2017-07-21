@@ -1,6 +1,9 @@
-<h3>Enter longitude and latitude to address</h3>
+<h2>Enter longitude and latitude to address:</h2>
 <label for="">Latitude</label>
-<input type="text" '#lat'>
+<input type="text" #lat>
 <label for="">Longitude</label>
-<input type="text" '#lng'>
-<button>Get Address</button>
+<input type="text" #lng>
+<button (click)='getPhysicalAddress(lat.value, lng.value); lat.value=""; lng.value=""'>Get Address</button>
+<div *ngIf='result'>
+  <h3>Address: {{result}}</h3>
+</div>
