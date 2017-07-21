@@ -1,0 +1,8 @@
+<h2>Convert an address:</h2>
+  <label for="Enter Street Address"></label>
+  <input type="text" #address>
+  <button (click)='getLocation(address.value); address.value=""'>Get coordinates</button>
+  <div *ngIf='result'>
+    <h3>Latitude: {{result.lat}}</h3>
+    <h3>Longitude: {{result.lng}}</h3>
+  </div>
